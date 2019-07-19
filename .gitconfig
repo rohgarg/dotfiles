@@ -1,0 +1,18 @@
+[user]
+  name = Rohan Garg
+  email = rohan.garg@nutanix.com
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+  showbranch = auto
+	ui = true
+[alias]
+	ci = commit
+	co = checkout
+	reb = rebase -i
+	ll = log --oneline --decorate
+	st = status
+[diff]
+  mnemonicPrefix = true
+  renames = true
