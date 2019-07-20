@@ -24,3 +24,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j " Delete comment character when joining commented lines
+endif
