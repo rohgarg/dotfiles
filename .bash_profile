@@ -12,7 +12,7 @@ fi
 
 export PROTOC_PATH=/usr/local/bin/protoc
 export PROTOBUF_INCLUDE=/usr/local/include
-export JAVA_HOME=/usr/libexec/java_home
+export JAVA_HOME=`/usr/libexec/java_home`
 export TERM=xterm-256color
 
 alias proj='cd ~/proj/'
