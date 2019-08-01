@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/texlive/2019basic/bin/x86_64-darwin/:$HOME/bin
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
@@ -12,7 +12,6 @@ fi
 
 export PROTOC_PATH=/usr/local/bin/protoc
 export PROTOBUF_INCLUDE=/usr/local/include
-export JAVA_HOME=`/usr/libexec/java_home`
 export TERM=xterm-256color
 
 alias proj='cd ~/proj/'
@@ -58,6 +57,8 @@ if [ ${OSTYPE:0:6} == "darwin" ];
 then
   alias rm='rm -i'
   alias cl='clear; ls -ltrhG'
+  export JAVA_HOME=`/usr/libexec/java_home`
+  export PATH=$PATH:/usr/local/texlive/2019basic/bin/x86_64-darwin/
 else
   alias rm='rm -I --preserve-root'
   alias cl='clear; ls -ltrh --color=always'
