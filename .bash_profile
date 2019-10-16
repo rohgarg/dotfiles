@@ -64,6 +64,8 @@ else
   alias cl='clear; ls -ltrh --color=always'
 fi
 
+export PATH=$PATH:$HOME/sws/bin
+
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
@@ -81,3 +83,5 @@ alias cpuinfo='lscpu'
 alias wget='wget -c'
 
 alias top='htop'
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
