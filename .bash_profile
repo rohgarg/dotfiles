@@ -1,5 +1,10 @@
 # .bash_profile
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/sws/bin:$HOME/.local/bin:$PATH
 
 if [ -f ~/sws/bash-sensible/sensible.bash ]; then
