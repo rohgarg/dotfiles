@@ -1,6 +1,10 @@
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
+# .bash_profile
 
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/sws/bin:$HOME/.local/bin:$PATH
+
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
 
 if [ -f ~/sws/bash-sensible/sensible.bash ]; then
    source ~/sws/bash-sensible/sensible.bash
@@ -10,12 +14,9 @@ if [ -f ~/sws/liquidprompt/liquidprompt ]; then
    source ~/sws/liquidprompt/liquidprompt
 fi
 
-export PROTOC_PATH=/usr/local/bin/protoc
-export PROTOBUF_INCLUDE=/usr/local/include
 export TERM=xterm-256color
 
 alias proj='cd ~/proj/'
-alias main='cd ~/proj/main'
 
 ## a quick way to get out of current directory ##
 alias c='clear'
@@ -59,12 +60,13 @@ then
   alias cl='clear; ls -ltrhG'
   export JAVA_HOME=`/usr/libexec/java_home`
   export PATH=$PATH:/usr/local/texlive/2019basic/bin/x86_64-darwin/
+  export PROTOC_PATH=/usr/local/bin/protoc
+  export PROTOBUF_INCLUDE=/usr/local/include
+  [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 else
   alias rm='rm -I --preserve-root'
   alias cl='clear; ls -ltrh --color=always'
 fi
-
-export PATH=$PATH:$HOME/sws/bin
 
 alias mv='mv -i'
 alias cp='cp -i'
