@@ -84,4 +84,19 @@ alias wget='wget -c'
 
 alias top='htop'
 
+# Git aliases
+alias gg="git grep -n"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gds="git diff --staged"
+alias gl="git log"
+alias gll="gl --oneline --decorate"
+alias gcp="git cherry-pick"
+alias gco="git checkout"
+alias gbr="git br"
+alias gpr="git pull --rebase"
+alias grb="git rebase -i"
+alias gsk="git stash --keep-index"
+alias gst="git status"
+
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
