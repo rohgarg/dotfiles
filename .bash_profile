@@ -2,10 +2,6 @@
 
 export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/sws/bin:$HOME/.local/bin:$PATH
 
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
 if [ -f ~/sws/bash-sensible/sensible.bash ]; then
    source ~/sws/bash-sensible/sensible.bash
 fi
